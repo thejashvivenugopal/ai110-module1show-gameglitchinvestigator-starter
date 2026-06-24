@@ -33,20 +33,31 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+If the key is 50
+1. User enters a guess of 40
+2. Game returns "Too Low"
+3. User enters a guess of 70 → "Too High"
+4. User enters a guess of 50 → "🎉 Correct!"
+5. Score updates and the game ends
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/thejashvivenugopal/Downloads/codepath/AI201/assignmentAiOne/ai110-module1show-gameglitchinvestigator-starter
+collected 4 items
+
+tests/test_game_logic.py::test_winning_guess PASSED                      [ 25%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [ 50%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [ 75%]
+tests/test_game_logic.py::test_hint_direction_matches_outcome PASSED     [100%]
+
+============================== 4 passed in 0.01s ===============================
+
 ```
 
 ## 🚀 Stretch Features
